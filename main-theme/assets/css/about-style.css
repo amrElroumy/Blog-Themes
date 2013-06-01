@@ -106,7 +106,7 @@ a:hover{color:#aebfd1}
 
 }
 
-.wrapper{font-family:"Lora", ;padding-top:3.4%;padding-bottom:5.4%;line-height:1;color:black;text-shadow:none}
+.wrapper{font-family: "Lora", Georgia, "Times New Roman", Times, serif; padding-top:3.4%;padding-bottom:5.4%;line-height:1;color:black;text-shadow:none}
 
 .container{width:813px;margin-left:auto;margin-right:auto}
 .header{-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0;border:2px solid black;border-bottom:0;color:white;padding:15px 0;background-color: #333;
