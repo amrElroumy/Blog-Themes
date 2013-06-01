@@ -1,5 +1,19 @@
 /*  Overriding some bootstrap defaults */
 
+.container-fluid {
+  max-width: 97%;
+  margin: auto;
+}
+
+.header {
+  max-width: 77%;
+  margin: auto auto 16px auto;
+}
+
+.container {
+  max-width: 77%;
+}
+
 p>img {
   display: block;
   margin: 5px auto;

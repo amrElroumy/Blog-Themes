@@ -1,28 +1,20 @@
- <div class="span3" id="sidebar">
-    <ul class="sidebar-menu sidebar-nav-fixed">
-        <li>
-            <div class="sidebar-menu-item-wrapper">
-                <a href="/">
-                    <i class="icon-home icon-white"></i>
-                    <span>Home</span>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="sidebar-menu-item-wrapper">
-                <a href="/blog/">
-                    <i class="icon-list-alt icon-white"></i>
-                    <span>Blog</span>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="sidebar-menu-item-wrapper">
-                <a href="/about/">
-                    <i class="icon-info-sign icon-white"></i>
-                    <span>About Me</span>
-                </a>
-            </div>
-        </li>
-    </ul>
-</div>
+<ul id="vertical-menu" class="vertical-menu">
+    <li><a href="/" class="icon-logo" title="Home">Logo</a></li>
+    <li><a href="/about.html" class="icon-user" title="About Me">About Me</a></li>
+    {% if archives_link %}
+    <li><a href={{archives_link}} class="icon-cabinet" title="Archive">Archive</a></li>
+    {% endif %}
+    <li><a href="/categories/index.html" class="icon-tags" title="Tags">Tags</a></li>
+    {% if rss_link %}
+    <li><a href="/rss.xml" class="icon-feed" title="RSS Feed">RSS</a></li>
+    {% endif %}
+    <li><a href="#" class="icon-pencil" title="Blog Roll">Blog Roll</a>
+        <ul class="vertical-submenu">
+            <li><a href="http://abdelrahmanogail.wordpress.com/" target="_blank">Abdelrahman Elogeel's Blog</a></li>
+            <li><a href="http://acmascis.org/blog" target="_blank">acmASCIS' Blog</a></li>
+            <li><a href="http://anasmehassab.wordpress.com/" target="_blank">Anas Awad's T-Blog</a></li>
+            <li><a href="http://iamsamy.blogspot.com/   " target="_blank">Mohamed Samy's thoughts</a></li>
+            <li><a href="http://mhesham.wordpress.com/" target="_blank">Muhammad Hesham's Blog</a></li>
+        </ul>
+    </li>
+</ul>

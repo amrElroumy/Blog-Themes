@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/assets/css/font-awesome.css">
   <link rel="stylesheet" href="/assets/css/pygments.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/component.css">
 
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -40,6 +41,7 @@
     <body>
 
       {% block body %}
+      {% include "sidebar.tmpl" %}
       <!-- Blog Continer -->
       <div class="container-fluid" id="container">
         <!-- Blog navbar Bar -->
@@ -86,10 +88,8 @@
       styles: {
         "font-size":  "120%"},
         scale: 120}
-        });
+      });
   </script>
-  <!-- <script src="/assets/js/jquery.slides.min.js" type="text/javascript"></script> -->
-  <!-- <script src="/assets/js/jquery.colorbox-min.js" type="text/javascript"></script> -->
   
   <script>
   (function() {
@@ -98,15 +98,16 @@
     gcse.type = 'text/javascript';
     gcse.async = true;
     gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-        })();
+    '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
   </script>
   <gcse:search></gcse:search>
 
   <script src="/assets/js/mathjax.js" type="text/javascript"></script>
 
   {{analytics}}
-<!--   <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true});</script>
-</body> -->
+
+</body>
+</html>
