@@ -42,8 +42,6 @@ a.post-title{
 }
 
 a.post-title:hover {
-  border-bottom: 1px dashed #DA7E18;
-  text-decoration: none;
   color: #545454;
 }
 
