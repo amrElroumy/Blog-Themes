@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="title" content="{{title}} | {{blog_title}}" >
+  <meta name="description" content="{{description}}" >
+  <meta name="author" content="{{blog_author}}">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} | {{blog_title}}</title>
+
+  <!-- Le favicon -->
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Le styles -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css">
+  <!-- <link rel="stylesheet" href="/assets/css/colorbox.css"> -->
+  <!-- <link rel="stylesheet" href="/assets/css/slides.css"> -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="/assets/css/pygments.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+      <![endif]-->
+      
+      <!-- Le fonts -->
+      {% block fonts %}
+      <!-- <link href="http://fonts.googleapis.com/css?family=Aldrich|Lato:400,400italic" rel="stylesheet" type="text/css"> -->
+      <!-- <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One|PT+Sans' rel='stylesheet' type='text/css'> -->
+      {% endblock fonts %}
+
+      {% block extra_head %}
+      {% endblock %}
+    </head>
+    <body>
+
+      {% block body %}
+      <!-- Blog Continer -->
+      <div class="container-fluid" id="container">
+        <!-- Blog navbar Bar -->
+        {% block navbar %}
+        {% include "navbar.tmpl" %}
+        {% endblock navbar %}
+        <!-- End Blog navbar Bar -->
+
+        <div class="container">
+
+         <div class="content" style="max-width: 800px; margin: 0 auto; padding-top:70px;"> 
+          <!--Body content-->
+          {% block content %}{% endblock %}
+          <!--End of body content-->
+          <hr>
+          <div class="footer"><small>{{content_footer}}</small></div>
+        </div>
+      </div>
+
+   <!--    {% block footer %}
+      <div class="row-fluid">
+        <div class="span12 site-footer">
+          ©2011-2012 <a href="/about">{{ blog_author }}</a> <br />Powered by <a href="https://github.com/hyde/hyde" title="The beast under the hood" target="_blank">Hyde</a>
+        </div>
+      </div>
+      {% endblock footer %} -->
+
+    </div>
+    <!-- End Blog Container -->
+
+    {% endblock body %}
+
+<!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [ ['$$','$$'], ["\\\[","\\\]"] ]},
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+      styles: {
+        "font-size":  "120%"},
+        scale: 120}
+        });
+  </script>
+  <!-- <script src="/assets/js/jquery.slides.min.js" type="text/javascript"></script> -->
+  <!-- <script src="/assets/js/jquery.colorbox-min.js" type="text/javascript"></script> -->
+  
+  <script>
+  (function() {
+    var cx = '000224632386531530640:6f01ofvavgy';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+        })();
+  </script>
+  <gcse:search></gcse:search>
+
+  <script src="/assets/js/mathjax.js" type="text/javascript"></script>
+
+  {{analytics}}
+<!--   <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true});</script>
+</body> -->

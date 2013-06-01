@@ -1,0 +1,23 @@
+<!-- Navbar
+  ================================================== -->
+  <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner">
+     <div class="container">
+       <a class="brand" href="/index.html">{{blog_title}}</a>
+       <div class="nav-collapse collapse" id="main-menu" style="height:auto;">
+        <ul class="nav" id="main-menu-left">
+          {% if archives_link %}
+          <li><a href={{archives_link}}>Archive</a></li>
+          {% endif %}
+          <li><a href={{tags_link}}>Tags</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          {% if rss_link %}
+          <li><a href={{rss_link}}>RSS</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
