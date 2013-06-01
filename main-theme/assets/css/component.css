@@ -154,6 +154,9 @@ ul ul.vertical-submenu {
 	border-radius: 0px;
 	background: #FFF;
 	box-shadow: #999 2px 2px 5px;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition:  all 0.2s;
 }
 
 ul.vertical-submenu li a {
@@ -181,4 +184,89 @@ ul.vertical-menu ul li {
 	float: none; 
 	/*border-bottom: 1px solid rgba(0, 0, 0, 0.05);*/
 	position: relative;
+}
+
+
+
+@media screen and (max-height: 25.25em), screen and (max-width: 44.3125em) {
+
+	.vertical-menu {
+		font-size: 100%;
+		position: relative;
+		text-align: center;
+		padding: 0;
+		top: auto;
+	}
+
+	.vertical-menu > li {
+		display: block;
+		margin: 0;
+		border-bottom: 4px solid #3793ca;
+	}
+
+	.vertical-menu > li:first-child {
+		border-top: 4px solid #3793ca;
+	}
+
+	li.cbp-tm-show > a,
+	.no-touch .vertical-menu > li > a:hover,
+	.no-touch .vertical-menu > li > a:active {
+		color: #fff;
+		background: #02639d;
+	}
+
+	.vertical-submenu {
+		position: relative;
+		display: none;
+		width: 100%;
+	}
+
+	.vertical-submenu > li {
+		padding: 0;
+	}
+
+	.vertical-submenu > li > a {
+		padding: 0.6em 2.3em 0.6em 0.6em;
+		border: none;
+		border-bottom: 2px solid #6fbbe9;
+	}
+
+	.vertical-submenu:after {
+		display: none;
+	}
+
+	.vertical-menu .cbp-tm-show .vertical-submenu {
+		display: block;
+		width: 100%;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		bottom: auto;
+		top: auto;
+	}
+
+	.vertical-menu li a {
+		width: 100%;
+		margin: auto;
+		text-indent: 0px;
+		font-family: lato;
+	}
+
+	.vertical-menu a:before {
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		vertical-align: middle;
+		margin-right: 0.6em;
+		-webkit-font-smoothing: antialiased;
+		margin-left: -50px;
+		margin-top: 24px;
+	}
+	
+	.icon-pencil {
+		display: none;
+	}
 }
