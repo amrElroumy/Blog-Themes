@@ -266,7 +266,7 @@ ul.vertical-menu ul li {
 		margin-top: 24px;
 	}
 	
-	.icon-pencil {
+	li a.icon-pencil {
 		display: none;
 	}
 }
