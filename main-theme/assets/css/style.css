@@ -1,5 +1,4 @@
 /*  Overriding some bootstrap defaults */
-
 .container-fluid {
   max-width: 97%;
   margin: auto;
@@ -16,7 +15,7 @@
 
 p>img {
   display: block;
-  margin: 5px auto;
+  margin: 12px auto;
   border: 1px solid #FFF;
   border-radius: 4px;
   box-shadow: #999 0 0 5px;
@@ -68,6 +67,12 @@ blockquote p {
   font-weight: 300;
   line-height: 1.25;
   padding: 5px 5px 5px 18px;
+}
+
+blockquote h1, blockquote h2, blockquote h3, blockquote h4, blockquote h5, blockquote h6 {
+  padding: 13px 5px 5px 8px;
+  margin-top: 0;
+  text-align: center;
 }
 
 blockquote cite:before {

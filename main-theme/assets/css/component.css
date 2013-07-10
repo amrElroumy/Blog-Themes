@@ -124,15 +124,6 @@
 .icon-pencil:before {
 	content: "\e016";
 }
-.icon-pencil-2:before {
-	content: "\e017";
-}
-.icon-pencil-3:before {
-	content: "\e018";
-}
-.icon-pen-alt-fill:before {
-	content: "\e019";
-}
 
 /* Example for media query (depends on total height of menu) */
 @media screen and (max-height: 34.9375em) { 
