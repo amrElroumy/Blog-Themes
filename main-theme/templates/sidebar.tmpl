@@ -6,21 +6,18 @@
     {% endif %}
     <li><a href="/categories/index.html" class="icon-tags" title="Tags">Tags</a></li>
     {% if rss_link %}
-    <li><a href="/rss.xml" class="icon-feed" title="RSS Feed">RSS</a></li>
     <li>
         <a href="http://feedburner.google.com/fb/a/mailverify?uri=AmrElroumysBlog&amp;loc=en_US" class="icon-envelope" 
-        title="Subscribe to My Blog by Mail" 
+        title="Subscribe by Mail" 
         onclick="window.open( 'http://feedburner.google.com/fb/a/mailverify?uri=AmrElroumysBlog&amp;loc=en_US', 'popupwindow', 'scrollbars=yes,width=660,height=600,resizable=yes,toolbar=no,directories=no,location=no,menubar=no,status=no'); return false">Subscribe</a>
     </li>
+    <li><a href="/rss.xml" class="icon-feed" title="RSS Feed">RSS</a></li>
     {% endif %}
     <li><a href="#" class="icon-pencil" title="Blog Roll">Blog Roll</a>
         <ul class="vertical-submenu">
-            <li><a href="http://abdelrahmanogail.wordpress.com/" target="_blank">Abdelrahman Elogeel's Blog</a></li>
-            <li><a href="http://acmascis.org/blog" target="_blank">acmASCIS' Blog</a></li>
-            <li><a href="http://anasmehassab.wordpress.com/" target="_blank">Anas Awad's T-Blog</a></li>
-            <li><a href="http://ferasferas.wordpress.com/" target="_blank">Feras' Blog</a></li>
-            <li><a href="http://iamsamy.blogspot.com/   " target="_blank">Mohamed Samy's thoughts</a></li>
-            <li><a href="http://mhesham.wordpress.com/" target="_blank">Muhammad Hesham's Blog</a></li>
+            {% for url, text in sidebar_links[lang] %}
+            <li><a href="{{ url }}" target="_blank">{{ text }}</a></li>
+            {% endfor %}
         </ul>
     </li>
 </ul>
